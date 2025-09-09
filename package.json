@@ -14,8 +14,8 @@
     "start": "npm run start --workspace=server",
     "lint": "concurrently \"npm run lint --workspace=client\" \"npm run lint --workspace=server\"",
     "lint:fix": "concurrently \"npm run lint:fix --workspace=client\" \"npm run lint:fix --workspace=server\"",
-    "prettier": "concurrently \"npm run prettier --workspace=client\" \"npm run prettier --workspace=server\"",
-    "prettier:fix": "concurrently \"npm run format --workspace=client\" \"npm run format --workspace=server\"",
+    "format": "concurrently \"npm run format --workspace=client\" \"npm run format --workspace=server\"",
+    "format:fix": "concurrently \"npm run format:fix --workspace=client\" \"npm run format:fix --workspace=server\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
