@@ -16,7 +16,8 @@
     "lint:fix": "concurrently \"npm run lint:fix --workspace=client\" \"npm run lint:fix --workspace=server\"",
     "format": "concurrently \"npm run format --workspace=client\" \"npm run format --workspace=server\"",
     "format:fix": "concurrently \"npm run format:fix --workspace=client\" \"npm run format:fix --workspace=server\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "keywords": [
     "portfolio",
@@ -40,11 +41,21 @@
     "node": ">=22.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.35.0",
     "concurrently": "^9.2.1",
     "eslint": "^9.35.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.3.0"
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,css,md}": [
+      "npm run format:fix",
+      "npm run lint:fix"
+    ]
   }
 }
