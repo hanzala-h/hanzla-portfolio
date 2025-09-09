@@ -12,6 +12,10 @@
     "build": "npm run build --workspace=client",
     "preview": "npm run preview --workspace=client",
     "start": "npm run start --workspace=server",
+    "lint": "concurrently \"npm run lint --workspace=client\" \"npm run lint --workspace=server\"",
+    "lint:fix": "concurrently \"npm run lint:fix --workspace=client\" \"npm run lint:fix --workspace=server\"",
+    "prettier": "concurrently \"npm run prettier --workspace=client\" \"npm run prettier --workspace=server\"",
+    "prettier:fix": "concurrently \"npm run format --workspace=client\" \"npm run format --workspace=server\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -36,6 +40,11 @@
     "node": ">=22.0.0"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "@eslint/js": "^9.35.0",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0"
   }
 }
