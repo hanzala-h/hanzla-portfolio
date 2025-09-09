@@ -8,8 +8,9 @@
     "server"
   ],
   "scripts": {
-    "dev": "echo \"No dev script yet\"",
-    "build": "echo \"No build script yet\"",
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "preview": "npm run preview --workspace=client",
     "start": "echo \"No start script yet\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
