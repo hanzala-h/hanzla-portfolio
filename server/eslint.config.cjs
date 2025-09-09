@@ -20,10 +20,7 @@ module.exports = defineConfig([
     plugins: {
       prettier: eslintPluginPrettier,
     },
-    extends: [
-      js.configs.recommended,
-      prettier,
-    ],
+    extends: [js.configs.recommended, prettier],
     rules: {
       'prettier/prettier': 'error',
     },
