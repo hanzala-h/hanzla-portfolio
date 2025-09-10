@@ -6,6 +6,10 @@ body {
   line-height: variables.$lh-body;
   color: variables.$color-secondary;
   background-color: variables.$color-primary;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -29,9 +33,13 @@ h3 {
   font-weight: 600;
 }
 
-a {
+a,
+button {
   font-family: variables.$font-mono;
   color: variables.$color-accent;
+}
+
+a {
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 
@@ -43,5 +51,24 @@ a {
   }
   &:disabled {
     color: variables.$color-accent-disabled;
+  }
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background-color: variables.$color-accent;
+  border: none;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: variables.$color-accent-hover;
+  }
+  &:active {
+    background-color: variables.$color-accent-active;
+    scale: 0.95;
+  }
+  &:disabled {
+    background-color: variables.$color-accent-disabled;
   }
 }

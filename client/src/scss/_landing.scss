@@ -1,0 +1,44 @@
+@use 'variables';
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$color-primary;
+  color: variables.$color-secondary;
+  font-family: variables.$font-body;
+}
+
+.main {
+  flex: 1; // fill remaining space
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: variables.$space-3;
+}
+
+.footer {
+  padding: variables.$space-2;
+  border-top: 1px solid variables.$color-neutral-2;
+  font-size: 14px;
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: variables.$space-1;
+  }
+
+  .footer-bottom {
+    text-align: center;
+
+    .version {
+      font-size: 12px;
+      color: variables.$color-neutral-3;
+      letter-spacing: 0.5px;
+    }
+  }
+}

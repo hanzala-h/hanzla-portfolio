@@ -1,0 +1,39 @@
+@use 'variables';
+
+.footer {
+  padding: variables.$space-2;
+  border-top: 1px solid variables.$color-neutral-2;
+  font-size: 14px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__socials {
+      display: flex;
+      gap: variables.$space-2;
+
+      &__link:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottom {
+    pointer-events: none;
+    font-size: 12px;
+    font-family: variables.$font-mono;
+    letter-spacing: variables.$ls-button;
+    color: variables.$color-neutral-3;
+
+    &__version {
+      margin: 0;
+      padding-top: 4px;
+
+      &__number {
+        text-decoration: underline;
+      }
+    }
+  }
+}
