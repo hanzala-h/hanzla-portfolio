@@ -1,0 +1,30 @@
+@use 'variables';
+
+body {
+  font-family: variables.$font-body;
+  font-size: 16px;
+  line-height: variables.$lh-body;
+  color: variables.$color-secondary;
+  background-color: variables.$color-primary;
+}
+
+h1, h2, h3 {
+  font-family: variables.$font-heading;
+  line-height: variables.$lh-heading;
+  margin-bottom: variables.$space-2;
+}
+
+h1 { font-size: 40px; font-weight: 700; }
+h2 { font-size: 28px; font-weight: 600; }
+h3 { font-size: 22px; font-weight: 600; }
+
+a {
+  font-family: variables.$font-mono;
+  color: variables.$color-accent;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover { color: variables.$color-accent-hover; }
+  &:active { color: variables.$color-accent-active; }
+  &:disabled { color: variables.$color-accent-disabled; }
+}
