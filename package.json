@@ -16,7 +16,7 @@
     "lint:fix": "concurrently \"npm run lint:fix --workspace=client\" \"npm run lint:fix --workspace=server\"",
     "format": "concurrently \"npm run format --workspace=client\" \"npm run format --workspace=server\"",
     "format:fix": "concurrently \"npm run format:fix --workspace=client\" \"npm run format:fix --workspace=server\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests yet\"",
     "prepare": "husky"
   },
   "keywords": [
