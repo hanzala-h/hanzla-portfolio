@@ -1,0 +1,24 @@
+name: Deploy Backend
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy-backend:
+    name: Deploy Backend on Koyeb
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Koyeb CLI
+        run: |
+          curl -L -o koyeb.tar.gz https://github.com/koyeb/koyeb-cli/releases/download/v5.7.0/koyeb-cli_5.7.0_linux_amd64.tar.gz
+          tar -xzf koyeb.tar.gz
+          chmod +x koyeb
+          sudo mv koyeb /usr/local/bin/
+
+      - name: Deploy Backend Service
+        run: koyeb service redeploy blonde-jemima/hanzla-portfolio-server --token ${{ secrets.KOYEB_API_TOKEN }}
