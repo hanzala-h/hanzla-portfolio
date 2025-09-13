@@ -1,0 +1,63 @@
+@use 'sass:list';
+
+/// Font stack for regular body text
+/// @type List
+$text-font-stack: ('Inter', system-ui, sans-serif) !default;
+
+/// Font stack for headings
+/// @type List
+$heading-font-stack: list.join(('Poppins'), $text-font-stack, comma) !default;
+
+/// Font stack for code and monospace text
+/// @type List
+$code-font-stack: ('Kode Mono', 'Courier New', monospace) !default;
+
+/// Primary background color
+/// @type Color
+$primary-color: rgb(248, 248, 248) !default;
+
+/// Secondary text color
+/// @type Color
+$secondary-color: rgb(34, 34, 34) !default;
+
+/// Lighter gray color
+/// @type Color
+$lighter-gray: rgb(224, 224, 224) !default;
+
+/// Light gray color
+/// @type Color
+$light-gray: rgb(176, 176, 176) !default;
+
+/// Dark gray color
+/// @type Color
+$dark-gray: rgb(160, 160, 160) !default;
+
+/// Mint accent color
+/// @type Color
+$mint: rgb(26, 188, 156) !default;
+
+/// Dark mint accent color
+/// @type Color
+$dark-mint: rgb(22, 160, 133) !default;
+
+/// Darker mint accent color
+/// @type Color
+$darker-mint: rgb(18, 140, 126) !default;
+
+/// Light mint accent color
+/// @type Color
+$light-mint: rgb(165, 214, 208) !default;
+
+/// Maximum container width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints for responsive design
+/// @prop {String} key - Breakpoint name (sm, md, lg, xl)
+/// @prop {Length} value - Minimum width in px
+$breakpoints: (
+  'sm': 480px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+) !default;
