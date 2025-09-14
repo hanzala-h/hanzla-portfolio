@@ -57,5 +57,8 @@
       "npm run format:fix",
       "npm run lint:fix"
     ]
+  },
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0"
   }
 }

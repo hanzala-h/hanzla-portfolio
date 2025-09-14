@@ -5,6 +5,7 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -19,12 +20,14 @@ body {
 }
 
 a {
-  color: inherit;
+  @include font-family($code-font-stack);
+  color: $mint;
   text-decoration: none;
+  transition: color 200ms ease-in-out;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    color: $dark-mint;
   }
 }
 

@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.topnav {
+  @include flex(row, space-between, center);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $light-gray;
+  height: $header-height;
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+
+    a {
+      color: $secondary-color;
+      @include font-family($heading-font-stack);
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    @include respond-to('md') {
+      display: none;
+    }
+  }
+
+  &__open[aria-expanded='true'] {
+    + .topnav__menu {
+      translate: 0;
+    }
+  }
+
+  &__close {
+    display: block;
+    margin-inline-start: auto;
+    margin-block-end: 8rem;
+  }
+
+  &__menu {
+    position: fixed;
+    inset: 0;
+    padding: 1rem 1.5rem;
+    background-color: $mint;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+
+    &.is-open {
+      translate: 0;
+    }
+
+    @include respond-to('md') {
+      position: static;
+      inset: auto;
+      translate: none;
+      background: none;
+      padding: 0;
+      transition: none;
+    }
+  }
+
+  &__links {
+    @include flex(column, flex-start, center);
+    gap: 1rem;
+
+    @include respond-to('md') {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid white;
+    width: 12vmax;
+
+    @include respond-to('md') {
+      color: $mint;
+      width: auto;
+      text-align: left;
+      border: 0;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    font-weight: 500;
+  }
+}

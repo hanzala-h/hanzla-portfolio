@@ -17,60 +17,51 @@
     />
   </head>
   <body>
-    <main class="main">
-      <h2 class="main__heading">🚧 Portfolio in the Works 🚧</h2>
-      <p class="main__text">
-        Hi there! Thanks for stopping by — I'm building this space to showcase
-        my work. Come back soon to see the full experience!
-      </p>
+    <header class="topnav">
+      <h1>
+        <a href="/">hanzla</a>
+      </h1>
+      <nav>
+        <span id="nav-label" hidden>Navigation</span>
+        <button
+          id="btnOpen"
+          class="topnav__open"
+          aria-expanded="false"
+          aria-labelledby="nav-label"
+        >
+          <img src="/icons/bars-solid-full.svg" alt="" width="24" height="27" />
+        </button>
+        <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+          <button id="btnClose" class="topnav__close" aria-label="Close">
+            <img
+              src="/icons/xmark-solid-full.svg"
+              alt=""
+              width="24"
+              height="27"
+            />
+          </button>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="#" class="topnav__link">Home</a>
+            </li>
+            <li class="topnav__item">
+              <a href="#" class="topnav__link">About</a>
+            </li>
+            <li class="topnav__item">
+              <a href="#" class="topnav__link">Projects</a>
+            </li>
+            <li class="topnav__item">
+              <a href="#" class="topnav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-      <button class="main__status__btn" data-tooltip="Still cooking 🍳">
-        What's up?
-      </button>
+    <main>
+      <div class="page"></div>
     </main>
 
-    <footer class="footer">
-      <div class="footer__top">
-        <div class="footer__top__copy">
-          &copy; 2025 Muhammad Hanzla. All Rights Reserved.
-        </div>
-        <div class="footer__top__socials">
-          <a
-            href="mailto:sayhi.hanzla@gmail.com"
-            class="footer__top__socials__link"
-            aria-label="Send me an email"
-          >
-            Email
-          </a>
-
-          <a
-            href="https://github.com/hanzala-h"
-            class="footer__top__socials__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit my GitHub profile"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/hanzalaa/"
-            class="footer__top__socials__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit my LinkedIn profile"
-          >
-            LinkedIn
-          </a>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__bottom__version">
-          v<span class="footer__bottom__version__number">0.1.0</span>
-        </p>
-      </div>
-    </footer>
-
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
